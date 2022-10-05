@@ -1,0 +1,19 @@
+name: demo-workflow
+on: 
+  workflow_dispatch: 
+  push: 
+    branches: [ master ]
+  pull_request: 
+    branches: [ master ]
+
+env: 
+  FULL_NAME: 'Emmanuel Sahr Sewah'
+  OCCUPATION: 'Software Developer'
+
+jobs: 
+  greeter:
+    name: "Greeter Job"
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Greet
+        run: echo Hello $FULL_NAME
