@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: kind-greeter
-        uses: ./.github/workflow/composite/test
+        uses: ./.github/workflows/composite/test
         with:
           name: $FULL_NAME
 
