@@ -8,6 +8,6 @@
   runs:
     using: "composite"
     steps:
-      - name: greet
+      - run: echo Hello ${{inputs.name}}
         shell: bash
-        run: echo Hello ${{inputs.name}}
+        name: greet
