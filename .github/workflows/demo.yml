@@ -10,10 +10,19 @@ env:
   FULL_NAME: 'Emmanuel Sahr Sewah'
   OCCUPATION: 'Software Developer'
 
-jobs: 
+jobs:
   greeter:
-    name: "Greeter Job"
+    name: Greeter Job
     runs-on: ubuntu-latest
-    steps: 
-      - name: Greet
-        run: echo Hello $FULL_NAME
+    steps:
+      - name: kind-greeter
+        uses: ./.github/workflow/composite/test
+        with:
+          name: $FULL_NAME
+
+#  greeter:
+#    name: "Greeter Job"
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Greet
+#        run: echo Hello $FULL_NAME
